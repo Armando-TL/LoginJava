@@ -1,6 +1,8 @@
 package main;
 
 // @author armando
+import javax.swing.JOptionPane;
+
 public class ViewLogin extends javax.swing.JFrame {
 
     public ViewLogin() {
@@ -13,16 +15,16 @@ public class ViewLogin extends javax.swing.JFrame {
 
         jLabel4 = new javax.swing.JLabel();
         JPForm = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        txtCorreo = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        jLsesion = new javax.swing.JLabel();
+        txtDni = new javax.swing.JTextField();
+        jLDni = new javax.swing.JLabel();
+        jLpassword = new javax.swing.JLabel();
+        jLrecuperarC = new javax.swing.JLabel();
         btnIniciarS = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        btnRegistrarse = new javax.swing.JButton();
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        txtPassword = new javax.swing.JPasswordField();
 
         jLabel4.setText("jLabel4");
 
@@ -31,50 +33,55 @@ public class ViewLogin extends javax.swing.JFrame {
         JPForm.setBackground(new java.awt.Color(255, 255, 255));
         JPForm.setToolTipText("");
 
-        jLabel1.setFont(new java.awt.Font("Roboto Medium", 0, 15)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setText("Inciar sesion");
+        jLsesion.setFont(new java.awt.Font("Roboto Medium", 0, 15)); // NOI18N
+        jLsesion.setForeground(new java.awt.Color(0, 0, 0));
+        jLsesion.setText("Inciar sesion");
 
-        txtCorreo.setBackground(new java.awt.Color(255, 255, 255));
-        txtCorreo.setFont(new java.awt.Font("Roboto Medium", 0, 15)); // NOI18N
-        txtCorreo.setForeground(new java.awt.Color(0, 0, 0));
-        txtCorreo.setAutoscrolls(false);
-        txtCorreo.setBorder(null);
+        txtDni.setBackground(new java.awt.Color(255, 255, 255));
+        txtDni.setFont(new java.awt.Font("Roboto Medium", 0, 15)); // NOI18N
+        txtDni.setForeground(new java.awt.Color(0, 0, 0));
+        txtDni.setAutoscrolls(false);
+        txtDni.setBorder(null);
 
-        jLabel2.setFont(new java.awt.Font("Roboto Medium", 0, 15)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("Correo:");
+        jLDni.setFont(new java.awt.Font("Roboto Medium", 0, 15)); // NOI18N
+        jLDni.setForeground(new java.awt.Color(0, 0, 0));
+        jLDni.setText("Dni:");
 
-        jLabel3.setFont(new java.awt.Font("Roboto Medium", 0, 15)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("Contraseña:");
+        jLpassword.setFont(new java.awt.Font("Roboto Medium", 0, 15)); // NOI18N
+        jLpassword.setForeground(new java.awt.Color(0, 0, 0));
+        jLpassword.setText("Contraseña:");
 
-        jLabel5.setFont(new java.awt.Font("Roboto Medium", 0, 15)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(51, 51, 255));
-        jLabel5.setText("Recuperar contraseña");
-        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLrecuperarC.setFont(new java.awt.Font("Roboto Medium", 0, 15)); // NOI18N
+        jLrecuperarC.setForeground(new java.awt.Color(51, 51, 255));
+        jLrecuperarC.setText("Recuperar contraseña");
+        jLrecuperarC.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         btnIniciarS.setBackground(new java.awt.Color(0, 153, 204));
         btnIniciarS.setFont(new java.awt.Font("Roboto Medium", 0, 15)); // NOI18N
         btnIniciarS.setForeground(new java.awt.Color(255, 255, 255));
         btnIniciarS.setText("Entrar");
         btnIniciarS.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        jButton1.setBackground(new java.awt.Color(0, 153, 204));
-        jButton1.setFont(new java.awt.Font("Roboto Medium", 0, 15)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Registrarse");
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnIniciarS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnIniciarSActionPerformed(evt);
             }
         });
 
-        jPasswordField1.setBackground(new java.awt.Color(255, 255, 255));
-        jPasswordField1.setFont(new java.awt.Font("Roboto Medium", 0, 15)); // NOI18N
-        jPasswordField1.setForeground(new java.awt.Color(0, 0, 0));
-        jPasswordField1.setBorder(null);
+        btnRegistrarse.setBackground(new java.awt.Color(0, 153, 204));
+        btnRegistrarse.setFont(new java.awt.Font("Roboto Medium", 0, 15)); // NOI18N
+        btnRegistrarse.setForeground(new java.awt.Color(255, 255, 255));
+        btnRegistrarse.setText("Registrarse");
+        btnRegistrarse.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnRegistrarse.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegistrarseActionPerformed(evt);
+            }
+        });
+
+        txtPassword.setBackground(new java.awt.Color(255, 255, 255));
+        txtPassword.setFont(new java.awt.Font("Roboto Medium", 0, 15)); // NOI18N
+        txtPassword.setForeground(new java.awt.Color(0, 0, 0));
+        txtPassword.setBorder(null);
 
         javax.swing.GroupLayout JPFormLayout = new javax.swing.GroupLayout(JPForm);
         JPForm.setLayout(JPFormLayout);
@@ -84,51 +91,50 @@ public class ViewLogin extends javax.swing.JFrame {
                 .addGroup(JPFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(JPFormLayout.createSequentialGroup()
                         .addGap(113, 113, 113)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLsesion, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(JPFormLayout.createSequentialGroup()
                         .addGap(36, 36, 36)
-                        .addComponent(jLabel2))
+                        .addComponent(jLDni))
                     .addGroup(JPFormLayout.createSequentialGroup()
                         .addGap(36, 36, 36)
-                        .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtDni, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(JPFormLayout.createSequentialGroup()
                         .addGap(36, 36, 36)
                         .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(JPFormLayout.createSequentialGroup()
                         .addGap(36, 36, 36)
-                        .addComponent(jLabel3))
-                    .addGroup(JPFormLayout.createSequentialGroup()
-                        .addGap(36, 36, 36)
-                        .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(JPFormLayout.createSequentialGroup()
-                        .addGap(36, 36, 36)
-                        .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLpassword))
                     .addGroup(JPFormLayout.createSequentialGroup()
                         .addGap(36, 36, 36)
                         .addComponent(btnIniciarS, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(JPFormLayout.createSequentialGroup()
                         .addGap(36, 36, 36)
-                        .addComponent(jLabel5)
+                        .addComponent(jLrecuperarC)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton1)))
-                .addContainerGap(29, Short.MAX_VALUE))
+                        .addComponent(btnRegistrarse))
+                    .addGroup(JPFormLayout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addGroup(JPFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jSeparator3, javax.swing.GroupLayout.DEFAULT_SIZE, 270, Short.MAX_VALUE)
+                            .addComponent(txtPassword))))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
         JPFormLayout.setVerticalGroup(
             JPFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JPFormLayout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addComponent(jLabel1)
+                .addComponent(jLsesion)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel2)
+                .addComponent(jLDni)
                 .addGap(22, 22, 22)
-                .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtDni, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(1, 1, 1)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(17, 17, 17)
-                .addComponent(jLabel3)
-                .addGap(22, 22, 22)
-                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(2, 2, 2)
+                .addComponent(jLpassword)
+                .addGap(18, 18, 18)
+                .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31)
                 .addComponent(btnIniciarS)
@@ -136,9 +142,9 @@ public class ViewLogin extends javax.swing.JFrame {
                 .addGroup(JPFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(JPFormLayout.createSequentialGroup()
                         .addGap(3, 3, 3)
-                        .addComponent(jLabel5))
-                    .addComponent(jButton1))
-                .addContainerGap(21, Short.MAX_VALUE))
+                        .addComponent(jLrecuperarC))
+                    .addComponent(btnRegistrarse))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -149,15 +155,13 @@ public class ViewLogin extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(JPForm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(JPForm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnRegistrarseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarseActionPerformed
 
         ViewRegistro viewRegistro = new ViewRegistro();
         viewRegistro.setViewLogin(this);
@@ -167,21 +171,37 @@ public class ViewLogin extends javax.swing.JFrame {
         this.setVisible(false);
         viewRegistro.setVisible(true);
 
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnRegistrarseActionPerformed
+
+    private void btnIniciarSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarSActionPerformed
+        if (!txtDni.getText().isEmpty() && txtPassword.getPassword().length > 0) {
+
+            String dni = txtDni.getText();
+            char[] passwordV = txtPassword.getPassword();
+            String password = new String(passwordV);
+
+            Usuarios usuarios = new Usuarios(dni, password);
+            usuarios.setViewLogin(this);
+            usuarios.iniciarSesion();
+
+        } else {
+            JOptionPane.showMessageDialog(null, "Debe llenar todos los campos");
+        }
+    }//GEN-LAST:event_btnIniciarSActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel JPForm;
     private javax.swing.JButton btnIniciarS;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JButton btnRegistrarse;
+    private javax.swing.JLabel jLDni;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JLabel jLpassword;
+    private javax.swing.JLabel jLrecuperarC;
+    private javax.swing.JLabel jLsesion;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JTextField txtCorreo;
+    private javax.swing.JTextField txtDni;
+    private javax.swing.JPasswordField txtPassword;
     // End of variables declaration//GEN-END:variables
 }
